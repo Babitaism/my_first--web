@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Babita's first webpage
+  </title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<nav>
+  <div class="logo">
+    <p>NAVBAR</p>
+  </div>
+</nav>
+<br><br><br>
+<body>
+  <center>
+    <tr>
+      <form method="POST" action="babita-form" id="babita-form">
+        <div id="form">
+          <label id="name"><strong> Name:</strong> </label>
+          <input id='name1' type="text" name="name"><br>
+          <label id="address"><strong>Address:</strong> </label>
+          <input id="address1" type="text" name="address"><br>
+          <label id="phone"> <strong> Phone:</strong></label>
+          <input id="phone1" type="number" name="phone" maxlength="10" onkeypress="checkDigits()"><br>
+          <label id="dob"><strong> DOB:</strong> </label>
+          <input id="dobb1" type="date" name="DOB"><br>
+          <input type="button" id="button" value="Submit" onclick="checkLoginDetails()">
+        
+    </tr>
+    </form>
+    <input type="button" id ="button" value = "User Details" onclick="window.open('/getUserDetails')">
+    </div>
+  </center>
+
+
+  <script>
+    function checkLoginDetails() {
+      let name = document.getElementById('name1').value
+      if (!name) {
+        alert("Please enter your Name")
+        return false
+      }
+      let address = document.getElementById('address1').value
+      if (!address) {
+        alert("Please enter your Address")
+        return false
+      }
+      let phone = document.getElementById('phone1').value
+      if (!phone) {
+        alert("Please enter your Phonenumber")
+        return false
+      }
+      if (phone.length > 10) {
+        console.log(phone.length, "ll")
+        alert('Invalid phonenumber')
+        return false
+      }
+      else if (phone.length < 10) {
+        alert('Phonenumber should be of 10 digits')
+        return false
+      }
+      let DOB = document.getElementById('dobb1').value
+      if (!DOB) {
+        alert("Please enter your DOB")
+        return false
+      }
+      document.getElementById('babita-form').submit()
+    }
+    function checkDigits() {
+      let phone = document.getElementById('phone1').value
+      len = phone.length
+      if (len > 9) {
+        alert("Invalid phonenumber")
+        return false
+      }
+    }
+
+    
+  </script>
+</body>
+
+</html>

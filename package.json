@@ -1,0 +1,15 @@
+
+    {
+        "name": "babita-form",
+        "version": "1.0.0",
+        "description": "This is my first web page",
+        "main": "index.js",
+        "scripts": {
+          "start": "nodemon -e js,html server.js"
+        },
+        "author": "Me",
+        "license": "MIT",
+        "dependencies": {
+          "jquery": "1.1.1"
+        }
+      }
